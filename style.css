@@ -155,6 +155,20 @@ a:visited {
 	height: calc(var(--padding)*2);
   }
 
+  .cards img {
+	display: block;
+	height: calc(var(--padding)*2);
+	width: auto;
+	max-width: calc(var(--padding)*2);
+  }
+
+  .card {
+	align-items: center;
+	width: 20em;
+	min-width: 240px;
+	gap: calc(var(--padding)*2);
+  }
+
 .social img {
   height: calc(var(--padding)*1.5);
   width: auto;
