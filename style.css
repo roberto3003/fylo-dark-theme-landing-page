@@ -12,6 +12,7 @@
 
 html {
   height: 100%;
+  background-color: var(--black);
 }
 
 body {
@@ -43,7 +44,6 @@ min-height: 25vh;
 }
 
 .wrapper {
-  background-color: var(--black);
   display: grid;
   place-items: center;
 }
@@ -153,14 +153,14 @@ a:visited {
 
   .card {
 	text-align: center;
-	width: 20em;
+	width: 16em;
 	min-width: 240px;
 	gap: calc(var(--padding)*2);
   }
 
 .social img {
-  height: calc(var(--padding)*1.5);
-  width: auto;
+  width: calc(var(--font-size)*2);
+  height: auto;
   min-width: initial;
 }
 
