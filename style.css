@@ -1,8 +1,11 @@
 :root {
-  --light: white;
+  --text: var(--white);
+  --light: var(--white);
   --dark: darkslategrey;
-  --medium: darkcyan;
-  --accent: mediumblue;
+  --medium: darkslateblue;
+  --accent: turquoise;
+  --black: rgba(46, 49, 49, 1);
+  --white: white;
   --padding: 2rem;
   --font-size: calc(1rem + 0.5vw);
 }
@@ -14,7 +17,7 @@ html {
 body {
   height: 100%;
   margin:0;
-  color: var(--dark);
+  color: var(--text);
   font-family: system-ui;
   font-size: var(--font-size);
   letter-spacing: 0.3em;
@@ -33,6 +36,10 @@ footer {
 background-color: gainsboro;
 min-width: 100%;
 min-height: 25vh;
+}
+
+.wrapper {
+  background-color: var(--black);
 }
 
 .links> *  > a {
@@ -84,6 +91,7 @@ color: var(--dark);
   padding: var(--padding) 0;
 }
 
+
 section {
   justify-content: space-evenly;
   margin-block-end: calc(var(--padding)*4);
@@ -91,10 +99,30 @@ section {
 
 .button {
   border-radius: var(--padding);
+  border: 0.1em  solid var(--text);
   display: inline;
   padding: calc(var(--padding)/2);
-  background-color: var(--accent);
 }
+
+.button:hover {
+  border: 0.1em  solid var(--accent);
+  color: var(--accent);
+}
+
+.cta {
+  color: var(--dark);
+  background-color: var(--accent);
+  border: 0.1em  solid var(--accent);
+}
+
+.cta:hover {
+  background-color: var(--text);
+}
+
+.cta a, .cta a:visited {
+  color: var(--dark);
+}
+
 
 
 a {
