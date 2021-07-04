@@ -32,6 +32,14 @@ p {
   max-width: 60ch;
 }
 
+main {
+  align-items: center;
+}
+
+nav {
+  margin-inline-start: auto;
+}
+
 footer {
 background-color: gainsboro;
 min-width: 100%;
@@ -92,10 +100,11 @@ color: var(--dark);
 }
 
 
-section {
+section, .section  {
   justify-content: space-evenly;
   margin-block-end: calc(var(--padding)*4);
 }
+
 
 .button {
   border-radius: var(--padding);
@@ -140,6 +149,10 @@ a:visited {
 
 .shadow:hover {
 	box-shadow: var(--shadow-deep);
+  }
+
+  .logo img {
+	height: calc(var(--padding)*2);
   }
 
 .social img {
