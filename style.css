@@ -32,10 +32,6 @@ p {
   max-width: 60ch;
 }
 
-main {
-  align-items: center;
-}
-
 nav {
   margin-inline-start: auto;
 }
@@ -48,6 +44,8 @@ min-height: 25vh;
 
 .wrapper {
   background-color: var(--black);
+  display: grid;
+  place-items: center;
 }
 
 .links> *  > a {
@@ -55,8 +53,7 @@ color: var(--dark);
 }
 
 .center {
-  display: grid;
-  place-items: center;
+  align-items: center;
 }
 
 .flex {
@@ -155,7 +152,6 @@ a:visited {
   }
 
   .card {
-	align-items: center;
 	text-align: center;
 	width: 20em;
 	min-width: 240px;
@@ -195,7 +191,4 @@ padding: 1em;
   overflow: hidden;
 }
 
-.align-center, .testimonial footer {
-  align-items: center;
-}
 
