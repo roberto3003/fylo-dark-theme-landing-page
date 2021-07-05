@@ -26,7 +26,7 @@ body {
 
 p {
   line-height: 1.5;
-  max-width: 60ch;
+  max-width: 60em;
 }
 
 nav {
@@ -51,13 +51,30 @@ footer {
   padding: var(--padding) 0;
 }
 
-
-.links> *  > a {
-  color: var(--dark);
+.auto-grid > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.center {
-  align-items: center;
+.auto-grid > * + * {
+  margin-top: 1rem;
+}
+
+@supports (display: grid) {
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size, 16em), 1fr)
+    );
+    grid-gap: calc(var(--padding)*2);
+  }
+
+  .auto-grid > * {
+    max-width: unset;
+    margin: unset;
+  }
 }
 
 .flex {
@@ -70,23 +87,48 @@ footer {
   flex-direction: column;
 }
 
-.two-col > * {
+.two > * {
   flex-grow: 1;
   flex-basis: calc(( 20em - 60%) * 999);
 }
 
-.two-col > :nth-last-child(n+ 3),
-.two-col > :nth-last-child(n+ 3) ~ * {
+.two > :nth-last-child(n+ 3),
+.two > :nth-last-child(n+ 3) ~ * {
   flex-basis: 100%;
 }
 
-.two-col img {
+.three > * {
+  flex-grow: 1;
+  flex-basis: calc(( 20em - 45%) * 999);
+}
+
+.three  > :nth-last-child(n+ 4),
+.three  > :nth-last-child(n+ 4) ~ * {
+  flex-basis: 100%;
+}
+
+
+.two img {
   min-width: 240px;
   max-width: 100%;
 }
 
-.two-col p, .two-col h1,.two-col h2,.two-col h3 {
-  max-width: 20ch;
+/* .two p, .two h1,.two h2,.two h3 {
+  max-width: 20em;
+}
+
+.three p, .three h1,.three h2,.three h3 {
+  max-width: 20em;
+}
+*/
+
+
+.links> *  > a {
+  color: var(--dark);
+}
+
+.center {
+  align-items: center;
 }
 
 section, .section  {
@@ -152,12 +194,12 @@ a:visited {
   max-width: calc(var(--padding)*2);
 }
 
-.card {
+/*.card {
+  flex-grow: 1;
   text-align: center;
   min-width: 240px;
-  max-width: 16em;
   gap: calc(var(--padding)*2);
-}
+}*/
 
 .social img {
   width: calc(var(--font-size)*2);
@@ -169,6 +211,7 @@ a:visited {
   background-color: var(--medium);
 }
 
+/*
 .testimonials > * {
   flex-grow: 1;
   flex-basis: calc(( 20em - 45%) * 999);
@@ -178,7 +221,7 @@ a:visited {
 .testimonials  > :nth-last-child(n+ 4) ~ * {
   flex-basis: 100%;
 }
-
+*/
 
 .testimonial {
   padding: 1em;
