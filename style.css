@@ -101,10 +101,6 @@ hr {
   gap: 1em;
 }
 
-.links> *  > a {
-  color: var(--dark);
-}
-
 .center {
   text-align: center;
 }
@@ -153,14 +149,6 @@ a:visited {
   color: inherit;
 }
 
-.shadow {
-  box-shadow: var(--shadow);
-}
-
-.shadow:hover {
-  box-shadow: var(--shadow-deep);
-}
-
 .logo img {
   height: calc(var(--padding)*2);
 }
@@ -177,12 +165,6 @@ a:visited {
 .cards img {
 height: 100%;
 width: auto;
-}
-
-.social img {
-  width: calc(var(--font-size)*2);
-  height: auto;
-  min-width: initial;
 }
 
 .testimonials article {
