@@ -31,7 +31,17 @@ p {
 }
 
 nav {
-  margin-inline-start: auto;
+  justify-content: flex-end;
+}
+
+
+.logo {
+  margin-inline-end: auto;
+}
+
+hr {
+  margin-block-end: calc(var(--padding)*2);
+  border:unset;
 }
 
 .footer {
@@ -67,11 +77,6 @@ nav {
   flex-wrap: wrap;
 }
 
-.flex-col {
-  flex-direction: column;
-  flex-wrap: initial;
-}
-
 .two > *, .three > *{
   flex-grow: 1;
   flex-basis: calc(( 16em - 35%) * 999);
@@ -87,10 +92,13 @@ nav {
   flex-basis: 100%;
 }
 
-
 .two img {
   min-width: 240px;
   max-width: 100%;
+}
+
+.gap-min {
+  gap: 1em;
 }
 
 .links> *  > a {
@@ -98,21 +106,21 @@ nav {
 }
 
 .center {
-  align-items: center;
+  text-align: center;
 }
 
 section, .section  {
-  justify-content: space-evenly;
-  margin-block-end: calc(var(--padding)*4);
+  margin-block-end: calc(var(--padding)*6);
 }
 
 
 .button {
   border-radius: var(--padding);
   border: 0.1em  solid var(--text);
-  display: inline;
   padding: calc(var(--padding)/2);
   text-align: center;
+  max-width: 20em;
+  margin: 0 auto;
 }
 
 .button:hover {
@@ -157,11 +165,18 @@ a:visited {
   height: calc(var(--padding)*2);
 }
 
+.card {
+  text-align: center;
+}
+
+
+.card-img {
+  height: 3em;
+}
+
 .cards img {
-  display: block;
-  height: calc(var(--padding)*2);
-  width: auto;
-  max-width: calc(var(--padding)*2);
+height: 100%;
+width: auto;
 }
 
 .social img {
