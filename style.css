@@ -40,7 +40,7 @@ nav {
 }
 
 hr {
-  margin-block-end: calc(var(--padding)*2);
+  margin-block-end: calc(var(--padding)*3);
   border:unset;
 }
 
@@ -62,7 +62,7 @@ hr {
   padding: var(--padding) 0;
 }
 
-.auto-grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
@@ -211,4 +211,6 @@ width: auto;
   align-items: center;
 }
 
-
+.footer-grid {
+  align-items: start;
+}
