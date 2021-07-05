@@ -8,7 +8,7 @@
   --black: rgba(46, 49, 49, 1);
   --white: white;
   --padding: 1em;
-  --font-size: clamp(1rem, 2.5vw, 2rem);
+  --font-size: clamp(1rem, 2vw, 2rem);
 }
 
 html {
@@ -87,9 +87,9 @@ footer {
   flex-direction: column;
 }
 
-.two > * {
+.two > *, .three > *{
   flex-grow: 1;
-  flex-basis: calc(( 20em - 60%) * 999);
+  flex-basis: calc(( 16em - 40%) * 999);
 }
 
 .two > :nth-last-child(n+ 3),
@@ -97,10 +97,10 @@ footer {
   flex-basis: 100%;
 }
 
-.three > * {
+/*.three > * {
   flex-grow: 1;
-  flex-basis: calc(( 20em - 45%) * 999);
-}
+  flex-basis: calc(( 16em - 40%) * 999);
+}*/
 
 .three  > :nth-last-child(n+ 4),
 .three  > :nth-last-child(n+ 4) ~ * {
